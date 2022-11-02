@@ -1,27 +1,26 @@
-package UseCase2;
+package UseCase3;
 
 public class LinkedList {
-    static class Node {
+    static class Node{
         int data;
         Node next;
-
-        Node(int data) {
-            this.data = data;
-            this.next = null;
+        Node(int data){
+            this.data=data;
+            this.next=null;
         }
     }
-
-    Node head,tail=null ;
+      Node head,tail=null ;
     public void adding(int data) {
-        Node newNode = new Node(data);
+       Node newNode = new Node(data);
         if(head ==null){
-        // Node newNode;
-        head = newNode;
-       // tail = newNode;
-    }
-        else
-            newNode.next=head;
+            // Node newNode;
             head = newNode;
+            // tail = newNode;
+        }
+        else {
+            tail.next = newNode;
+            //head = newNode;
+        }
         tail = newNode;
     }
 
